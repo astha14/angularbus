@@ -1,0 +1,72 @@
+<h3 [align]="'center'">Passenger Details</h3>
+<br><br>
+
+
+<h4>Passenger Information</h4>
+
+<form>
+    <form [formGroup]="PassengerForm" (ngSubmit)="DisplayPassenger()" id="form" >
+        <p >
+            
+            <input type="text"  class="textbox"   placeholder=" Name" id="PassengerName" required minlength="5"  
+             name="name" formControlName="name"/>
+        </p>
+        <div *ngIf="!name?.valid && (name?.dirty || name?.touched)" class="error">
+            <div *ngIf="name?.errors?.required">
+                Please enter Name  
+            </div>
+        </div>
+        <div *ngIf="name?.errors?.minlength">
+            FirstName minilength is 5
+        </div>
+        
+        
+        <p >
+            
+            <input type="text" class="textbox"  placeholder="Email Address"  required id="email" name="email" formControlName="email" />
+     </p>
+        <div *ngIf="!email?.valid && (email?.dirty || email?.touched)" class="error">
+            <div *ngIf="email?.errors?.pattern">
+                Please enter correct email
+            </div>
+            <div *ngIf="!email?.valid && (email?.dirty || email?.touched)" class="error">
+                <div *ngIf="email?.errors?.required">
+                 Email is required 
+                </div>
+            </div>
+            
+        </div>
+        <p >
+            
+            <input type="number" class="textbox"  placeholder="Age"  required id="age" name="age" formControlName="age" />
+     </p>
+     
+    <p >
+            
+        <input type="text" class="textbox"  placeholder="Gender"  required id="gender" name="gender" formControlName="gender" />
+ </p>
+ 
+             <p >
+                
+                <input type="tel" class="textbox"  placeholder="contact Number"  id="contact" name="contact" formControlName="contact" />
+             </p>  
+             <div *ngIf="!contact?.valid && (contact?.dirty || contact?.touched)" class="error">
+                <div *ngIf="contact?.errors?.pattern">
+                  it should only contain numbers
+                </div>
+            </div>
+            
+            <div *ngIf="contact?.errors?.maxlength">
+                maxlength is 10
+             </div>
+             <p >
+            
+                <input type="number" class="textbox"  placeholder="Number Of Passengers"  required id="numberOfPassenger" name="age" formControlName="numberOfPassengers" />
+         </p>
+         
+    
+    <div >
+            <input type="submit"  id="regbtn"  value="Passengerdetails" >
+        </div>
+    </form>
+</form>

@@ -1,0 +1,71 @@
+<ul>
+  <li><a  routerLink='Profile'>Profile</a></li>
+  <li><a routerLink='Previous Booking'>Previous Booking</a></li>
+  <li><a routerLink='Changepassword'>Change Password</a></li>
+  <li><a routerLink='Wallet'>Wallet</a></li>
+  <li><a routerLink='Home'>Book Bus</a></li>
+</ul>
+
+
+
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-10 ticket ">
+      <strong><i class="fa fa-bus"></i>LTI TRAVELS</strong>
+        <h6 class="text-center pt-3 pb-3 "> Online Reservation</h6>
+        <table class="table ">
+   <thead>
+    <td class="text-capitalize">sagar To Bhopal</td>
+    <td><strong>LTI Travels</strong></td> 
+    <td>25/5</td>
+   
+   </thead>  
+        </table>
+        <table class="table ps_details">
+          <tr>
+            <th>Passenger Details</th>
+            <th>Booking Id</th>
+            <th>Seats</th>
+            <th>Total Fare</th>
+            
+          </tr>
+          <tr>
+            <td><b></b> <br>
+              <span></span> <br>
+              <span></span>
+            </td>
+
+            <td>52</td>
+            <td >
+             <span  >4</span> 
+            </td>
+            <td>500</td>
+          </tr>
+        </table>
+        <table class="table ps_details ">
+          <tr>
+            <th>Bus Name</th>
+            <th>Bus Number</th>
+            <th>Reporting Time </th>
+            <th>Departure Date and Time</th>
+            
+          </tr>
+          <tr>
+            <td><br>
+            <span> <em>Status: Confirmed/Cancelled</em></span>
+            </td>
+            <td></td>
+            <td>Before 30 minutes</td>
+            <td></td>
+          </tr>
+        </table>
+    </div>
+    <div class="row">
+      <p style="color:red">* Please Keep This Copy Of The Ticket During Journey At All Times *</p>
+    </div>
+  </div>
+</div>
+<div class="doNotPrint">
+  <button (click)="printPage()" style="margin-left: 50%">Print</button>
+</div>
